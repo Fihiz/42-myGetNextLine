@@ -6,7 +6,7 @@
 /*   By: sad-aude <sad-aude@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/16 17:44:30 by sad-aude     #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/16 19:48:36 by sad-aude    ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/17 21:42:08 by sad-aude    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -22,7 +22,10 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 
+# define BUF_SIZE 10
+
 void	ft_putchar_fd(char c);
 void	ft_putnbr_fd(int fd);
+size_t  ft_strlen(char *str);
 
 #endif

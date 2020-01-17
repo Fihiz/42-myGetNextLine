@@ -6,12 +6,22 @@
 /*   By: sad-aude <sad-aude@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/16 20:04:18 by sad-aude     #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/17 18:42:57 by sad-aude    ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/17 19:06:32 by sad-aude    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+
+size_t	ft_strlen(char *s)
+{
+	size_t i;
+
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
+}
 
 void	ft_putchar_fd(char c)
 {
