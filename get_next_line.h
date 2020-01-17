@@ -25,5 +25,4 @@
 void	ft_putchar_fd(char c);
 void	ft_putnbr_fd(int fd);
 
-
 #endif
