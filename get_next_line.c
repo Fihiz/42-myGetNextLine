@@ -6,7 +6,7 @@
 /*   By: sad-aude <sad-aude@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/16 17:44:40 by sad-aude     #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/23 06:40:41 by sad-aude    ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/23 06:56:52 by sad-aude    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -36,9 +36,9 @@ size_t		ft_strlen(char *s)
 
 // int     cut_line(char **reste, int back_n, char **line)
 // {
-//     if (back_n < 0) //il n'y a pas de '\n' ou vide
+//     if (back_n < 0) //il n'y a pas de '\n' donc EOF
 //     {
-        //return (0) comportement gnl
+        //je strdup ce que j'ai
 //     }
 //     if (back_n > 0) //'\n' a trouver et substr partie de droite puis partie de gauche
 //     {
