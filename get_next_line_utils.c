@@ -6,7 +6,7 @@
 /*   By: sad-aude <sad-aude@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/16 17:43:40 by sad-aude     #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/23 06:41:27 by sad-aude    ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/23 22:01:36 by sad-aude    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -99,4 +99,4 @@ void	*ft_strnew(int size) //mon calloc remanié
 }
 
 //strjoin a free 
-//ma temp ou je stock est a free et remettre a NULL ensuite
+//ma temp ou je stock est a free et remettre a NULL ensuite !
