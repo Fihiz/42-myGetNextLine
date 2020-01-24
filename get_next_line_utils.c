@@ -6,7 +6,7 @@
 /*   By: sad-aude <sad-aude@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/16 17:43:40 by sad-aude     #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/24 01:40:31 by sad-aude    ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/24 05:12:36 by sad-aude    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -57,7 +57,7 @@ char	*ft_strdup(char *src)
 	return (dest);
 }
 
-char	*ft_strjoin(char *s1, char *s2, int id)
+char	*ft_strjoin(char *s1, char *s2 /*int id*/)
 {
 	size_t	i;
 	size_t	ind;
@@ -73,15 +73,15 @@ char	*ft_strjoin(char *s1, char *s2, int id)
 	while (s2[++ind])
 		concat[i + ind] = s2[ind];
 	concat[i + ind] = '\0';
-	if (id == 1)
-		free(s1);
-	else if (id == 2)
-		free(s2);
-	else if (id == 3)
-	{
-		free(s1);
-		free(s2);
-	}
+	// if (id == 1)
+	// 	free(s1);
+	// else if (id == 2)
+	// 	free(s2);
+	// else if (id == 3)
+	// {
+	// 	free(s1);
+	// 	free(s2);
+	// }
 	return (concat);
 }
 
