@@ -6,7 +6,7 @@
 /*   By: sad-aude <sad-aude@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/16 17:44:30 by sad-aude     #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/23 23:01:38 by sad-aude    ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/24 01:34:40 by sad-aude    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -22,7 +22,7 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #ifndef BUFFER_SIZE
-# define BUFFER_SIZE 2
+# define BUFFER_SIZE 4
 #endif
 
 size_t  ft_strlen(char *str);

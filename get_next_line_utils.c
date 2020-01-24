@@ -6,7 +6,7 @@
 /*   By: sad-aude <sad-aude@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/16 17:43:40 by sad-aude     #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/23 22:01:36 by sad-aude    ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/24 01:40:31 by sad-aude    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -93,7 +93,7 @@ void	*ft_strnew(int size) //mon calloc remanié
 	if (!(tab = malloc(sizeof(char) * (size + 1))))
 		return (NULL);
 	index = 0;
-	while (index < size)
+	while (index <= size)
 		tab[index++] = '\0';
 	return (tab);
 }
