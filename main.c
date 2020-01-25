@@ -4,7 +4,7 @@
 int     main()
 {
     char *str;
-    int fd = open("test", O_RDONLY);
+    int fd = open("a", O_RDONLY);
     int zob;
     while (1)
     {

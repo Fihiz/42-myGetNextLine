@@ -6,7 +6,7 @@
 /*   By: sad-aude <sad-aude@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/16 17:44:40 by sad-aude     #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/25 05:43:33 by sad-aude    ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/25 07:20:05 by sad-aude    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -47,17 +47,13 @@ int				get_next_line(int fd, char **line)
 	static char *reste = NULL;
 	int			ret;
 	int			back_n;
-	int			i;
 
-	i = 0;
-	if (fd < 0 || BUFFER_SIZE < 1 ||
+	if (fd < 0 || BUFFER_SIZE < 1 || !line ||
 			read(fd, buffer, 0) < 0 || (!reste && !(reste = ft_strnew(0))))
 		return (-1);
 	while ((back_n = ft_strichr(reste, '\n')) < 0 &&
 			(ret = read(fd, buffer, BUFFER_SIZE)) > 0)
 	{
-		dprintf(1,"[i = %d]\n", i);
-		i++;
 		buffer[ret] = '\0';
 		reste = ft_strjoin(reste, buffer, 1);
 	}
