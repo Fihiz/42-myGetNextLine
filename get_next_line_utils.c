@@ -6,14 +6,14 @@
 /*   By: sad-aude <sad-aude@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/16 17:43:40 by sad-aude     #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/24 05:12:36 by sad-aude    ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/25 06:02:00 by sad-aude    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char		*ft_substr(char *s, unsigned int start, size_t len)
+char	*ft_substr(char *s, unsigned int start, size_t len)
 {
 	char	*sub;
 	size_t	i;
@@ -29,7 +29,7 @@ char		*ft_substr(char *s, unsigned int start, size_t len)
 	return (sub);
 }
 
-int			ft_strindex(char *str, char c) //ft_strchr avec index
+int		ft_strichr(char *str, char c)
 {
 	int i;
 
@@ -42,7 +42,7 @@ int			ft_strindex(char *str, char c) //ft_strchr avec index
 	}
 	return (-1);
 }
-   
+
 char	*ft_strdup(char *src)
 {
 	char	*dest;
@@ -57,35 +57,37 @@ char	*ft_strdup(char *src)
 	return (dest);
 }
 
-char	*ft_strjoin(char *s1, char *s2 /*int id*/)
+char	*ft_strjoin(char *s1, char *s2, int id)
 {
-	size_t	i;
-	size_t	ind;
-	char	*concat;
+	size_t ind;
+	size_t len;
+	size_t i;
+	char *concat;
 
 	i = -1;
 	ind = -1;
+	len = ft_strlen(s1);
 	if (s1 == 0 ||
-		!(concat = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1))))
+		!(concat = malloc(sizeof(char) * (len + ft_strlen(s2) + 1))))
 		return (NULL);
-	while (++i < ft_strlen(s1))
+	while (++i < len)
 		concat[i] = s1[i];
 	while (s2[++ind])
 		concat[i + ind] = s2[ind];
 	concat[i + ind] = '\0';
-	// if (id == 1)
-	// 	free(s1);
-	// else if (id == 2)
-	// 	free(s2);
-	// else if (id == 3)
-	// {
-	// 	free(s1);
-	// 	free(s2);
-	// }
+	if (id == 1)
+		free(s1);
+	else if (id == 2)
+		free(s2);
+	else if (id == 3)
+	{
+		free(s1);
+		free(s2);
+	}
 	return (concat);
 }
 
-void	*ft_strnew(int size) //mon calloc remanié
+void	*ft_strnew(int size)
 {
 	char	*tab;
 	int		index;
@@ -97,6 +99,3 @@ void	*ft_strnew(int size) //mon calloc remanié
 		tab[index++] = '\0';
 	return (tab);
 }
-
-//strjoin a free 
-//ma temp ou je stock est a free et remettre a NULL ensuite !
