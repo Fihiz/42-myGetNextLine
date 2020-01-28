@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   get_next_line.c                                  .::    .:/ .      .::   */
+/*   get_next_line_bonus.c                            .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: sad-aude <sad-aude@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/16 17:44:40 by sad-aude     #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/28 20:48:41 by sad-aude    ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/28 21:04:26 by sad-aude    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -44,18 +44,18 @@ int				cut_line(char **reste, int back_n, char **line)
 int				get_next_line(int fd, char **line)
 {
 	char		buffer[BUFFER_SIZE + 1];
-	static char *reste;
+	static char *reste[10240];
 	int			ret;
 	int			back_n;
 
 	if (fd < 0 || BUFFER_SIZE < 1 || !line ||
-			read(fd, buffer, 0) < 0 || (!reste && !(reste = ft_strnew(0))))
+			read(fd, buffer, 0) < 0 || (!reste[fd] && !(reste[fd] = ft_strnew(0))))
 		return (-1);
-	while ((back_n = ft_strichr(reste, '\n')) < 0 &&
+	while ((back_n = ft_strichr(reste[fd], '\n')) < 0 &&
 			(ret = read(fd, buffer, BUFFER_SIZE)) > 0)
 	{
 		buffer[ret] = '\0';
-		reste = ft_strjoin(reste, buffer, 1);
+		reste[fd] = ft_strjoin(reste[fd], buffer, 1);
 	}
-	return (cut_line(&reste, back_n, line));
+	return (cut_line(&reste[fd], back_n, line));
 }
