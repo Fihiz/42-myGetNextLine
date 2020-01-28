@@ -6,7 +6,7 @@
 /*   By: sad-aude <sad-aude@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/16 17:44:30 by sad-aude     #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/26 04:37:44 by sad-aude    ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/28 21:48:06 by sad-aude    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -24,22 +24,12 @@
 # include <sys/stat.h>
 # include <fcntl.h>
 
-typedef struct          s_multifd
-{
-    struct s_multifd    *next;
-    char                *reste;
-    int                 fd;
-}                       t_multifd;
-
 size_t		ft_strlen(char *str);
 int			ft_strichr(char *str, char c);
 char		*ft_strdup(char *src);
 char		*ft_strjoin(char *s1, char *s2, int id);
 void		*ft_strnew(int size);
 char		*ft_substr(char *s, unsigned int start, size_t len);
-t_multifd   *new_fd(int fd);
-t_multifd   *get_fd(t_multifd *multifd, int fd);
-void        del_fd(t_multifd **multifd, int fd);
 int			get_next_line(int fd, char **line);
 
 #endif

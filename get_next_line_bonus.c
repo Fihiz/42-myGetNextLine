@@ -6,12 +6,12 @@
 /*   By: sad-aude <sad-aude@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/16 17:44:40 by sad-aude     #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/28 21:04:26 by sad-aude    ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/28 21:51:18 by sad-aude    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 size_t			ft_strlen(char *s)
 {
