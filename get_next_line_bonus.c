@@ -3,10 +3,10 @@
 /*                                                              /             */
 /*   get_next_line_bonus.c                            .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: sad-aude <sad-aude@student.le-101.fr>      +:+   +:    +:    +:+     */
+/*   By: sad-aude <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2020/01/16 17:44:40 by sad-aude     #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/28 21:51:18 by sad-aude    ###    #+. /#+    ###.fr     */
+/*   Created: 2020/01/29 22:14:16 by sad-aude     #+#   ##    ##    #+#       */
+/*   Updated: 2020/01/29 22:16:08 by sad-aude    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -48,8 +48,8 @@ int				get_next_line(int fd, char **line)
 	int			ret;
 	int			back_n;
 
-	if (fd < 0 || BUFFER_SIZE < 1 || !line ||
-			read(fd, buffer, 0) < 0 || (!reste[fd] && !(reste[fd] = ft_strnew(0))))
+	if (fd < 0 || BUFFER_SIZE < 1 || !line || read(fd, buffer, 0) < 0 ||
+			(!reste[fd] && !(reste[fd] = ft_strnew(0))))
 		return (-1);
 	while ((back_n = ft_strichr(reste[fd], '\n')) < 0 &&
 			(ret = read(fd, buffer, BUFFER_SIZE)) > 0)
